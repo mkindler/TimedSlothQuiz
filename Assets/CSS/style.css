@@ -104,11 +104,11 @@ input {
     padding: 1.5rem;
     font-size: 1.8rem;
     border: none;
-    box-shadow: 0 0.1rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+    box-shadow: 0 0.1rem 1.4rem 0 #56b9eb;
 }
 
 input::placeholder {
-    color: #aaa;
+    color: #aaaaaa;
 }
 
 #username {
@@ -119,7 +119,7 @@ input::placeholder {
 
 #end-text {
     font-size: 2.4rem;
-    color: #fff;
+    color: #ffffff;
     text-align: center;
 }
 
