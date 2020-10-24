@@ -56,5 +56,6 @@ Please open a New Issue via GitHub for pull requests on this project that includ
 * Trilogy Education Services
 * https://www.w3schools.com
 * https://www.screencastify.com/
+* https://fontawesome.com/
 * Book:  <i>JavaScript & JQuery:  Interactive Front-End Web Development</i>, Jon Duckett
 * [10 Facts About Sloths](https://www.worldanimalprotection.us/news/10-facts-about-sloths-natures-slowest-animals)
