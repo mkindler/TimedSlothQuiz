@@ -1,14 +1,16 @@
+// Variables to reference elements
 let question = document.querySelector('#question');
 let choices = Array.from(document.querySelectorAll('.choice-text'));
 let progressText = document.querySelector('#progressText');
 let scoreText = document.querySelector('#score');
 let progressBarFull = document.querySelector('#progressBarFull');
 
-let currentQuestion = {}
-let acceptingAnswers = true
-let score = 0
-let questionCounter = 0
-let availableQuestions = []
+// Variables needed to keep track of game play
+let currentQuestion = {};
+let acceptingAnswers = true;
+let score = 0;
+let questionCounter = 0;
+let availableQuestions = [];
 
 // Set questions, choices, and answers
 let questions = [
@@ -54,9 +56,11 @@ let questions = [
     }
 ]
 
-const SCORE_POINTS = 100
-const MAX_QUESTIONS = 5
+// Constants set for how many points per correctly answered question, and how many total questions will be asked
+const SCORE_POINTS = 100;
+const MAX_QUESTIONS = 5;
 
+// Game play
 startGame = function () {
     questionCounter = 0;
     score = 0;
@@ -64,6 +68,7 @@ startGame = function () {
     getNewQuestion();
 }
 
+// Grab questions for game play
 getNewQuestion = function () {
     if (availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
         localStorage.setItem('mostRecentScore', score);
@@ -71,6 +76,7 @@ getNewQuestion = function () {
         return window.location.assign('end.html');
     }
 
+    // Progress bar as game is played
     questionCounter++;
     progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`;
     progressBarFull.style.width = `${(questionCounter / MAX_QUESTIONS) * 100}%`;
@@ -89,6 +95,7 @@ getNewQuestion = function () {
     acceptingAnswers = true;
 }
 
+// Actions that take place as the game is played, including incrementing score if questions are answered correctly, and flashing green (correct) or red (incorrect) as questions are answered
 choices.forEach(function (choice) {
         choice.addEventListener('click', function (e) {
                 if (!acceptingAnswers)
@@ -114,9 +121,10 @@ choices.forEach(function (choice) {
             });
     })
 
+// Score adjusts according to the function below and is displayed at the top of the game page
 incrementScore = function (num) {
     score += num;
     scoreText.innerText = score;
 }
 
-startGame()
+startGame();

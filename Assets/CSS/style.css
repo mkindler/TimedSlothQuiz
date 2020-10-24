@@ -1,5 +1,7 @@
+/* Google Font for application */
 @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
 
+/* Styles applied across multiple HTML pages */
 body {
     background-color: #24ce7b;
 }
@@ -9,7 +11,7 @@ body {
     margin: 0;
     padding: 0;
     font-size: 62.5%;
-    font-family: 'Staatliches';
+    font-family: 'Staatliches', 'Arial';
 }
 
 h1 {
@@ -131,4 +133,10 @@ input::placeholder {
     margin-left: 1rem;
     font-size: 2rem;
     color: #ffffff;
+}
+
+@media screen and (max-width: 768px) {
+    .choice-container {
+        min-width: 40rem;
+    }
 }

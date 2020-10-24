@@ -1,3 +1,4 @@
+/* Styles specific to the High Scores/Leaderboard page */
 body {
     color: #ffffff;
 }
@@ -33,4 +34,10 @@ body {
     cursor: not-allowed;
     box-shadow: none;
     transform: none;
+}
+
+@media screen and (max-width: 768px) {
+    .choice-container {
+        min-width: 40rem;
+    }
 }
